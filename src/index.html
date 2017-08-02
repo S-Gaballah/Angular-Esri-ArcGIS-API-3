@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <title>Esri TypeScript</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css" rel="stylesheet">
+
+    <link href="styles.css" rel="stylesheet" />
+
+    <!-- Polyfill(s) for older browsers -->
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+
+    <!-- Configure SystemJS -->
+    <script src="systemjs.config.js"></script>
+    <script>
+        (function (global) { 'use strict'; global.dojoConfig = { async: true }; })(window);
+    </script>
+
+
+    <!-- load Esri library -->
+    <link rel="stylesheet" href="https://js.arcgis.com/3.20/esri/css/esri.css">
+    <script src="//js.arcgis.com/3.20/"></script>
+
+    <!-- load esri-system-js library -->
+    <script src="node_modules/esri-system-js/dist/esriSystem.js"></script>
+
+    <script>
+        System.import('main.js').catch(function (err) { console.error(err); });
+    </script>
+</head>
+
+<body>
+    <app></app>
+</body>
+
+</html>

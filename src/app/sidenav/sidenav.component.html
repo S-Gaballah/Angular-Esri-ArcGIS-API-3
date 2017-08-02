@@ -1,0 +1,32 @@
+<md-sidenav-container class="mat-sidenav-container">
+  <md-sidenav [mode]="mode" [opened]="isOpened">
+    <md-card class="mat-card">
+      <div md-card-header>
+        <img md-card-image src="app/assets/images/logo.png">
+        <md-card-title>Esri TypeScript</md-card-title>
+      </div>
+      <md-card-content>
+        <p>
+          Startup Application for ArcGIS API for JavaScript with Angular 4 and material design
+        </p>
+      </md-card-content>
+    </md-card>
+
+    <md-nav-list mat-nav-list>
+      <a href="#" md-list-item>
+        <md-icon class="material-icons">home</md-icon>
+        <span>Home</span>
+      </a>
+      <a href="#" md-list-item>
+        <i class="material-icons" >map</i>
+        <span>Map</span>
+      </a>
+      <a href="#" md-list-item>
+        <i class="material-icons">show_chart</i>
+        <span>Charts</span>
+      </a>
+    </md-nav-list>
+  </md-sidenav>
+  <ng-content></ng-content>
+
+</md-sidenav-container>

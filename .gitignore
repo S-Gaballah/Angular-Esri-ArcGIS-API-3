@@ -1,0 +1,11 @@
+node_modules/
+src/app/**/*.js
+src/app/**/*.map
+src/main.js
+src/main.js.map
+.vscode/*
+
+
+#System Files
+.DS_Store
+Thumbs.db

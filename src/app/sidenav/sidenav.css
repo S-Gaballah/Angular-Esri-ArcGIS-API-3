@@ -1,0 +1,9 @@
+md-sidenav {
+  width: 200px !important;
+}
+
+ md-sidenav-container, .my-content {
+  margin: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+}

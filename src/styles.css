@@ -1,0 +1,28 @@
+li {
+    font-size: large;
+}
+
+div.panel-heading {
+   font-size: x-large;
+}
+
+body,html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#map{
+    height: 92%;
+}
+
+md-sidenav {
+  width: 200px !important;
+}
+
+ md-sidenav-container, .my-content {
+  margin: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+}
