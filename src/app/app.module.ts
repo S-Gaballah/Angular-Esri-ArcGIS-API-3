@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { MaterialModule } from '@angular/material';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+// import { mater } from '@angular/material';
+import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
+
 
 import { AppComponent } from './app.component';
 
@@ -21,7 +21,7 @@ import { MapModule } from './map/map.module';
     MapModule,
     BrowserAnimationsModule,
     NoopAnimationsModule,
-    MaterialModule
+    // MaterialModule
   ],
   declarations: [AppComponent],
   providers: [],

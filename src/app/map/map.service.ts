@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, ElementRef, ViewChild, ViewContainerRef } from '@angular/core';
 
 import Map from 'esri/map';
 import ArcGISDynamicMapServiceLayer from 'esri/layers/ArcGISDynamicMapServiceLayer';
@@ -8,12 +8,13 @@ export class MapService {
 
     private _map: Map;
 
+    @ViewChild('mapElement', { static: true }) mapRef: ElementRef;
 
     get Map() {
         return this._map;
     }
-    CreateMap() {
-        this._map = new Map('map', {
+    CreateMap(mapRef) {
+        this._map = new Map(mapRef, {
             basemap: 'topo',
             center: [-96.75290067627297, 39.034671990514816], // long, lat
             zoom: 7,

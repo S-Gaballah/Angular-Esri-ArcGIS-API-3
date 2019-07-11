@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild, ViewContainerRef, ElementRef } from '@angular/core';
 
 import { MapService } from './map.service';
+
 
 @Component({
     // moduleId: module.id,
@@ -11,17 +12,20 @@ import { MapService } from './map.service';
     `,
 })
 
-export class MapComponent implements OnInit {
+export class MapComponent implements AfterViewInit {
     map: any;
+    @ViewChild('mapElement', { static: true }) mapRef: ElementRef;
+    ngAfterViewInit(): void {
+        this.map = this.mapService.CreateMap(this.mapRef.nativeElement);
+        this.map.on('extent-change', this.MapExtentCange);
+        this.mapService.AddDynamicLayer(this.map);
+    }
 
     constructor(private mapService: MapService) {
     }
 
-    ngOnInit() {
-        this.map = this.mapService.CreateMap();
-        this.map.on('extent-change', this.MapExtentCange);
-        this.mapService.AddDynamicLayer(this.map);
-    }
+    // ngOnInit() {
+    // }
 
     MapExtentCange(evt) {
         console.log(evt);

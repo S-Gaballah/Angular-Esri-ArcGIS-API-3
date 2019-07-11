@@ -6,7 +6,7 @@ div.panel-heading {
    font-size: x-large;
 }
 
-body,html {
+body,html, mat-sidenav-container {
     margin: 0;
     padding: 0;
     width: 100%;
